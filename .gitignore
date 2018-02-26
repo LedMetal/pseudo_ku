@@ -6,6 +6,7 @@
 !/Assets/
 !/ProjectSettings/
 !.gitignore
+!pseudo*.apk
 
 # OS Stuff
 .DS_Store
