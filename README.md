@@ -9,7 +9,7 @@ I ended up finishing the app and I've had it on my phone for a long time. Unfort
 Feel free to download 'pseudo_ku.apk' (located in root folder), and try it out on your Android phone. I will keep this old build up until this project gets re-written enough for a build of its own.
 
 ## Current Build
-You can access the current build [here]().
+You can access the current build [here](https://github.com/LedMetal/pseudo_ku/blob/master/pseudo_ku.apk).
 
 **NOTE**: The current build is the final build from the old project.
 
