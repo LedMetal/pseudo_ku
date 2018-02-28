@@ -19,7 +19,7 @@ public class Square {
         this.Locked = true;
         this.AvailableValues = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
     }
-
+        
     public void ResetAvailableValues()
     {
         this.AvailableValues = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -29,11 +29,22 @@ public class Square {
     {
         this.Value = value;
         this.AvailableValues.Remove(value);
+
+        PermittedValues.DeleteRowPermittedValue(this.Row, this.Value);
+        PermittedValues.DeleteColPermittedValue(this.Column, this.Value);
+        PermittedValues.DeleteSectionPermittedValue(this.Section, this.Value);
     }
 
     public void UnsetValue()
     {
-        this.Value = 0;
+        if (this.Value != 0)
+        {
+            PermittedValues.AddRowPermittedValue(this.Row, this.Value);
+            PermittedValues.AddColPermittedValue(this.Column, this.Value);
+            PermittedValues.AddSectionPermittedValue(this.Section, this.Value);
+
+            this.Value = 0;
+        }
     }
 
     public void LockSquare() { this.Locked = true; }
